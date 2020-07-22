@@ -60,4 +60,18 @@ public class UserValidatorTest {
         boolean result = userValidator.validatePhnum("918940770823");
         Assert.assertEquals(true,result);
     }
+
+    @Test
+    public void givenPasswordCharacter_WhenProper_ShouldReturnTrue() {
+        UserValidator userValidator = new UserValidator();
+        boolean result = userValidator.ValidatePassword("Riyazahamed");
+        Assert.assertEquals(true,result);
+    }
+
+    @Test
+    public void givenPasswordCharacter_WhenShort_ShouldReturnFalse() {
+        UserValidator userValidator = new UserValidator();
+        boolean result = userValidator.ValidatePassword("Riyaz");
+        Assert.assertEquals(true,result);
+    }
 }
