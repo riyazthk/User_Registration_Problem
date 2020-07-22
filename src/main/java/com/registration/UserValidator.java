@@ -8,6 +8,8 @@ public class UserValidator {
     private static final String email_Id= "^([0-9a-zA-Z/-/_+.]*[@][^.][a-zA-Z]*.[a-z]{2,4}(.[a-z]{2})?)$";
     private static final String ph_Num= "^91[ ][0-9]{10}$";
     private static final String password="^[0-9A-z]{8,}$";
+    private static final String upperCase="^[a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]{8,}$";
+
 
 
     public boolean validateFirstName(String fName) {
@@ -35,5 +37,10 @@ public class UserValidator {
     public boolean ValidatePassword(String pass) {
         Pattern pattern=Pattern.compile(password);
         return  pattern.matcher(pass).matches();
+    }
+
+    public boolean ValidateUpperCase(String uppercase) {
+        Pattern pattern=Pattern.compile(upperCase);
+        return  pattern.matcher(uppercase).matches();
     }
 }
