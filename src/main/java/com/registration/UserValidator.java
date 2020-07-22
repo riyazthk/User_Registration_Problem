@@ -9,6 +9,8 @@ public class UserValidator {
     private static final String ph_Num= "^91[ ][0-9]{10}$";
     private static final String password="^[0-9A-z]{8,}$";
     private static final String upperCase="^[a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]{8,}$";
+    private static final String number_Pattern="^[a-zA-Z0-9]*[0-9]+[a-zA-Z0-9]{8,}$";
+
 
 
 
@@ -42,5 +44,10 @@ public class UserValidator {
     public boolean ValidateUpperCase(String uppercase) {
         Pattern pattern=Pattern.compile(upperCase);
         return  pattern.matcher(uppercase).matches();
+    }
+
+    public boolean ValidateNumeric(String number) {
+        Pattern pattern=Pattern.compile(number_Pattern);
+        return  pattern.matcher(number).matches();
     }
 }
