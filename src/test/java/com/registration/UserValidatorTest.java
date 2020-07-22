@@ -74,4 +74,19 @@ public class UserValidatorTest {
         boolean result = userValidator.ValidatePassword("Riyaz");
         Assert.assertEquals(true,result);
     }
+
+    @Test
+    public void givenPasswordUpperCase_WhenProper_ShouldReturnTrue() {
+        UserValidator userValidator = new UserValidator();
+        boolean result = userValidator.ValidateUpperCase("Riyaz5678");
+        Assert.assertEquals(true,result);
+    }
+
+    @Test
+    public void givenPasswordUpperCase_WhenShort_ShouldReturnFalse() {
+        UserValidator userValidator = new UserValidator();
+        boolean result = userValidator.ValidateUpperCase("riyaz5678");
+        Assert.assertEquals(true,result);
+
+    }
 }
