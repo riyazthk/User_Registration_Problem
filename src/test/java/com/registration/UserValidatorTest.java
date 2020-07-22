@@ -102,4 +102,18 @@ public class UserValidatorTest {
         boolean result = userValidator.ValidateNumeric("riyazahamed");
         Assert.assertEquals(true,result);
     }
+
+    @Test
+    public void givenPasswordSymbol_WhenProper_ShouldReturnTrue() {
+        UserValidator userValidator = new UserValidator();
+        boolean result = userValidator.ValidateSymbol("r!yazahamed");
+        Assert.assertEquals(true,result);
+    }
+
+    @Test
+    public void givenPasswordSymbol_WhenShort_ShouldReturnFalse() {
+        UserValidator userValidator = new UserValidator();
+        boolean result = userValidator.ValidateSymbol("riyazahamed");
+        Assert.assertEquals(true,result);
+    }
 }
