@@ -116,4 +116,5 @@ public class UserValidatorTest {
         boolean result = userValidator.ValidateSymbol("riyazahamed");
         Assert.assertEquals(true,result);
     }
+
 }
