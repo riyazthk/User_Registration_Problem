@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 public class UserValidator {
 
     private static final String user_Name= "^[A-Z][a-z]{2,}$";
-    private static final String email_Id= "^([0-9a-zA-Z/-/_+.]*[@][^.][a-zA-Z]*.[a-z]{2,4}(.[a-z]{2})?)$";
+    private static final String email_Id= "^([^.][0-9a-zA-Z-_+.]*[^.][@][^.][a-zA-Z]*.[a-z]{2,4}(.[a-z]{2,4})?)$";
     private static final String ph_Num= "^91[ ][0-9]{10}$";
     private static final String password="^[0-9A-z]{8,}$";
     private static final String upperCase="^[a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]{8,}$";
